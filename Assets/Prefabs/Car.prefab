@@ -1941,7 +1941,7 @@ ParticleSystem:
           m_RotationOrder: 4
     arc:
       value: 30
-      mode: 0
+      mode: 1
       spread: 0
       speed:
         serializedVersion: 2

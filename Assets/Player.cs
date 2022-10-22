@@ -10,7 +10,7 @@ public class Player : MonoBehaviour
     [SerializeField] TMP_Text stepText;
     [SerializeField] ParticleSystem dieParticles;
     [SerializeField,Range(0.01f,1f)] float moveDuration=0.2f;
-    [SerializeField,Range(0.01f,1f)] float jumpHeight=0.5f;
+    [SerializeField,Range(0.01f,1f)] float jumpHeight=1f;
     [SerializeField] private int maxTravel;
     [SerializeField] private int currentTravel;
     
@@ -36,16 +36,16 @@ public class Player : MonoBehaviour
        //     Debug.Log("back");
 
        var moveDir = Vector3.zero;
-        if(Input.GetKey(KeyCode.UpArrow))
+        if(Input.GetKey(KeyCode.UpArrow) || Input.GetKey("w"))
             moveDir += new Vector3(0, 0, 1);
 
-        if(Input.GetKey(KeyCode.DownArrow))
+        if(Input.GetKey(KeyCode.DownArrow) || Input.GetKey("s"))
             moveDir += new Vector3(0, 0, -1);
         
-        if(Input.GetKey(KeyCode.LeftArrow))
+        if(Input.GetKey(KeyCode.LeftArrow) || Input.GetKey("a"))
             moveDir += new Vector3(-1, 0, 0);
 
-        if(Input.GetKey(KeyCode.RightArrow))
+        if(Input.GetKey(KeyCode.RightArrow) || Input.GetKey("d"))
             moveDir += new Vector3(1, 0, 0);
 
         if(moveDir != Vector3.zero && IsJumping()==false)
@@ -123,9 +123,9 @@ public class Player : MonoBehaviour
         //transform.DORotate(Vector3.forward*360,0.2f).SetLoops(-1,LoopType.Restart);
 
         // Animasi Gepeng
-        transform.DOScaleY(0.1f,0.2f);
-        transform.DOScaleX(3,0.2f);
-        transform.DOScaleZ(2,0.2f);
+        transform.DOScaleY(0.2f,0.2f);
+        transform.DOScaleX(4,0.2f);
+        transform.DOScaleZ(3,0.2f);
 
         this.enabled = false;
         dieParticles.Play();

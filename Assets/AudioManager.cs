@@ -12,6 +12,10 @@ public class AudioManager : MonoBehaviour
 
     void Start()
     {
+        if(VolSlide == null)
+            return;
+
+
         float db;
         mixer.GetFloat("Volume", out db);
         VolSlide.value = (db +80)/80;

@@ -10,10 +10,10 @@ public class GameManager : MonoBehaviour
   [SerializeField] Player player;
   [SerializeField] GameObject road;
   [SerializeField] GameObject grass;
-  [SerializeField] int extent = 7;
-  [SerializeField] int frontDistance = 12;
+  [SerializeField] int extent = 6;
+  [SerializeField] int frontDistance = 10;
   [SerializeField] int backDistance = -4;
-  [SerializeField] int maxSameTerrainRepeat = 2;
+  [SerializeField] int maxSameTerrainRepeat = 3;
 
  // int maxZpos;
 

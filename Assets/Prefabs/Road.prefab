@@ -512,7 +512,7 @@ MonoBehaviour:
   carPrefab0: {fileID: 2701054245424950430, guid: ab8506190da1db447874ca044e86e12c, type: 3}
   terrain: {fileID: 8628263004006727171}
   minSpawnDuration: 2
-  maxSpawnDuration: 4
+  maxSpawnDuration: 5
 --- !u!1 &5722158687853723476
 GameObject:
   m_ObjectHideFlags: 0
